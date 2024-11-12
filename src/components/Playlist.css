@@ -1,0 +1,16 @@
+.custom-con {
+    background: linear-gradient(90deg, #c4f6e0, #fae1d2);
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .bottom-text {
+    background-color: #fceed1;
+    color: #7d3cff;
+    font-weight: bold;
+    text-align: center;
+    border-top: 1px solid #fae1d2;
+  }
+  
