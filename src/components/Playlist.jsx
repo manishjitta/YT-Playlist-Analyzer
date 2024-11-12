@@ -28,7 +28,7 @@ function Playlist() {
   
     try {
       const playlistId = new URLSearchParams(new URL(link).search).get("list");
-      const apiKey = "YOUR_API_KEY";
+      const apiKey = process.env.REACT_APP_YOUTUBE_API_KEY;
   
       let totalVideos = 0;
       let totalDurationInSeconds = 0;
