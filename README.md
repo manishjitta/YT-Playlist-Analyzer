@@ -8,3 +8,6 @@ A simple React app that allows users to analyze YouTube playlists. It calculates
 - **View Playlist Analytics**: Displays the channel name, total number of videos, and the total duration of the playlist.
 - **Playback Speed Breakdown**: View estimated times for watching the playlist at various speeds (1x, 1.25x, 1.5x, 1.75x, 2x).
 - **Responsive Design**: Fully responsive UI for desktop and mobile devices.
+
+
+Link:- https://yt-playlist-analyzer.netlify.app/
