@@ -28,13 +28,14 @@ function Playlist() {
   
     try {
       const playlistId = new URLSearchParams(new URL(link).search).get("list");
-      const apiKey = process.env.REACT_APP_YOUTUBE_API_KEY;
+      const apiKey = import.meta.env.VITE_YOUTUBE_API_KEY;
+
   
       let totalVideos = 0;
       let totalDurationInSeconds = 0;
       let nextPageToken = "";
       let channelName = "";
-      
+  
       do {
         const response = await axios.get(
           `https://www.googleapis.com/youtube/v3/playlistItems`,
@@ -99,6 +100,7 @@ function Playlist() {
     setLoading(false);
   };
   
+  
 
   const convertISO8601ToSeconds = (duration) => {
     const regex = /PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?/;
@@ -113,9 +115,7 @@ function Playlist() {
     const hours = Math.floor(seconds / 3600);
     const minutes = Math.floor((seconds % 3600) / 60);
     const sec = Math.floor(seconds % 60);
-    return `${hours > 0 ? hours + " hours, " : ""}${
-      minutes > 0 ? minutes + " minutes, " : ""
-    }${sec} seconds`;
+    return `${hours > 0 ? hours + " hours, " : ""}${minutes > 0 ? minutes + " minutes, " : ""}${sec} seconds`;
   };
 
   return (
@@ -145,7 +145,6 @@ function Playlist() {
             Analyzing, please wait...
           </button>
         )}
-
 
         {!loading && !error && watchTimes["1x"] && (
           <div className="mt-4 p-3 bg-light rounded shadow-sm">
