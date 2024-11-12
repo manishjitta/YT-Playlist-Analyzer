@@ -1,23 +1,42 @@
 body {
-  height: 100vh;
-  width: 70vw;
+  height: auto;
+  width: 90vw;
+  max-width: 100%;
   margin: auto;
   background: linear-gradient(135deg, #ffe5d5, #f7caff);
   font-family: "Poppins", sans-serif;
 }
 
-.custom-header {
-  color: black;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease-in-out;
+.container {
+  max-width: 100%;
 }
 
-.header-title {
-  font-size: 1.8rem;
-  font-weight: bold;
+@media (max-width: 768px) {
+  .header-title {
+    font-size: 1.5rem;
+  }
+  .header-subtitle {
+    font-size: 0.8rem;
+  }
+  .custom-con {
+    padding: 1.5rem;
+  }
+  .btn {
+    font-size: 0.9rem;
+  }
 }
 
-.header-subtitle {
-  font-size: 0.9rem;
+@media (max-width: 576px) {
+  .w-75 {
+    width: 100% !important;
+  }
+  .input-group {
+    flex-direction: column;
+  }
+  .input-group .form-control {
+    margin-bottom: 0.5rem;
+  }
+  .spinner-border {
+    margin-right: 8px;
+  }
 }
-
